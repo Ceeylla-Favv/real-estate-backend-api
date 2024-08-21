@@ -81,7 +81,7 @@ const loginUser = async(req, res) =>{
 }
  const dashboard = (req, res) => {
     const user = req.user;
-    res.json("welcome "+ user)
+    res.json("welcome "+ user.role)
 
  }
 

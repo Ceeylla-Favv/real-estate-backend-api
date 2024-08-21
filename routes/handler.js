@@ -6,7 +6,7 @@ const { isLoggedIn, isAdmin } = require('../middleware/authenticate');
 const router = express.Router();
 router.route('/register').post(registerUser)
 router.route('/login').post(loginUser)
-router.route('/dashboard', [isLoggedIn, isAdmin]).get(dashboard)
+router.route('/dashboard').get([isLoggedIn, isAdmin], dashboard)
 
 
 

@@ -37,11 +37,12 @@ const registerUser = async(req, res)=>{
 
     if (newUser) return res.status(201).json({message: "registered successfully", newUser})
     
-    const 
+ 
    } catch (error) {
         console.log(error);
                 
    }
+
 }
 
 const loginUser = async(req, res) =>{
@@ -78,6 +79,10 @@ const loginUser = async(req, res) =>{
         console.log(error)
     }
 }
+ const dashboard = (req, res) => {
+    const user = req.user;
+    res.json("welcome "+ user)
 
+ }
 
-module.exports ={registerUser, loginUser}
+module.exports ={registerUser, loginUser, dashboard}

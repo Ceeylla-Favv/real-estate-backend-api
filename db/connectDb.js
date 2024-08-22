@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-dotenv =require('dotenv').config
+require('dotenv').config
 
 const connectionString = process.env.connectString
 

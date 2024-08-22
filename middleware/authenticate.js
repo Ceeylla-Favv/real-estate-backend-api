@@ -1,8 +1,12 @@
+// imported jwt
 const jwt = require ('jsonwebtoken');
 require('dotenv').config();
+// imported the usermodel from the model folder and user file
 const userModel = require('../model/User');
 const isLoggedIn = async (req, res, next) => {
+    // to verify token using jwt
     let token;
+    
     if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")){
         try {
             token = req.headers.authorization.split(' ')[1];

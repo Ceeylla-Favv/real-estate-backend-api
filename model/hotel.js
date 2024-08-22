@@ -26,6 +26,6 @@ const hotelSchema = new mongoose.Schema({
     }
 })
 
-const hotelModel = new mongoose.model('Hotel', hotelSchema)
+const hotelModel = mongoose.model('Hotel', hotelSchema)
 
 module.exports = hotelModel
